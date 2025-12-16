@@ -9,7 +9,14 @@ app.use(express.json());
 app.use(express.static("public"));
 
 const server = http.createServer(app);
-const io = new Server(server, { cors: { origin: "*" } });
+const io = new Server(server, {
+  cors: {
+    origin: "*",
+    methods: ["GET", "POST"],
+    allowedHeaders: ["Content-Type"],
+    credentials: false
+  }
+});
 
 let roomData = { male: [], female: [], selected: [] };
 
