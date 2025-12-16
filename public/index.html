@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Bốc thăm Online</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
+</head>
+<body>
+<div class="container">
+  <h2>🎯 BỐC THĂM ONLINE</h2>
+
+  <div>
+    <label>Họ và tên:</label>
+    <input id="name" style="width:100%; padding:8px;">
+  </div>
+
+  <div>
+    <label>Giới tính:</label>
+    <select id="gender" style="width:100%; padding:8px;">
+      <option value="male">Nam</option>
+      <option value="female">Nữ</option>
+    </select>
+  </div>
+
+  <button onclick="join()">✔ Tham gia bốc thăm</button>
+
+  <h3>Danh sách số khả dụng:</h3>
+  <div id="numbers" class="number-box"></div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
