@@ -5,6 +5,10 @@ const socket = io(window.location.origin, {
 let user = {};
 let data = {};
 
+socket.on("connect", () => {
+  console.log("Socket connected:", socket.id);
+});
+
 socket.on("update", d => {
   data = d;
   renderNumbers();
